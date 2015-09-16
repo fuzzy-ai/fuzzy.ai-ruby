@@ -22,48 +22,50 @@ Or install it yourself as:
 
 This gem handles the most basic usage of Fuzzy.io.
 
-  # Require the module
+```ruby
+# Require the module
 
-  require 'fuzzy_io'
+require 'fuzzy_io'
 
-  # Your API key (get one from https://fuzzy.io/)
+# Your API key (get one from https://fuzzy.io/)
 
-  API_KEY = 'YOUR_API_KEY_HERE'
+API_KEY = 'YOUR_API_KEY_HERE'
 
-  # Create an account object
+# Create an account object
 
-  acct = FuzzyIo::Account.new API_KEY
+acct = FuzzyIo::Account.new API_KEY
 
-  # ID of the agent you want to call; get it from https://fuzzy.io/
+# ID of the agent you want to call; get it from https://fuzzy.io/
 
-  AGENT_ID = 'AGENT_ID_HERE'
+AGENT_ID = 'AGENT_ID_HERE'
 
-  # Inputs; map of string or symbol to numbers
+# Inputs; map of string or symbol to numbers
 
-  inputs = {
-    input1: 10,
-    input2: 30
-  }
+inputs = {
+  input1: 10,
+  input2: 30
+}
 
-  # Ask the agent to evaluate the inputs; returns two values!
+# Ask the agent to evaluate the inputs; returns two values!
 
-  outputs, evaluation_id = acct.evaluate AGENT_ID, inputs
+outputs, evaluation_id = acct.evaluate AGENT_ID, inputs
 
-  # Outputs is all the outputs
+# Outputs is all the outputs
 
-  puts outputs["output1"]
+puts outputs["output1"]
 
-  # An opaque ID for the evaluation
+# An opaque ID for the evaluation
 
-  puts evaluation_id
+puts evaluation_id
 
-  # For feedback, provide a performance metric
+# For feedback, provide a performance metric
 
-  performance = {
-    performance1: 3
-  }
+performance = {
+  performance1: 3
+}
 
-  fb = acct.feedback evaluation_id, performance
+fb = acct.feedback evaluation_id, performance
+```
 
 ### FuzzyIo::Account
 
