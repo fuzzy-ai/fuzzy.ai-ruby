@@ -27,8 +27,9 @@ module FuzzyIo
       http = Net::HTTP.start(uri.hostname, uri.port, opt={use_ssl: (uri.scheme == "https")})
       res = http.request(req)
       if res.is_a?(Net::HTTPSuccess)
+        id = res['X-Evaluation-ID']
         outputs = JSON.parse res.body
-        return outputs
+        return outputs, id
       else
         raise res
       end
