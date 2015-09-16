@@ -1,5 +1,15 @@
 require "fuzzy_io/version"
 
 module FuzzyIo
-  # Your code goes here...
+
+  class Account
+
+    attr_reader :key
+
+    def initialize(key)
+      @key = key
+    end
+
+  end
+
 end
