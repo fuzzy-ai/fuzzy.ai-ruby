@@ -18,9 +18,16 @@ class TestFuzzyIo < MiniTest::Unit::TestCase
 
   def test_has_evaluate_method
     inputs = {input1: 10}
-    outputs, id = @account.evaluate AGENT_ID, inputs
-    refute_nil id
+    outputs, evaluation_id = @account.evaluate AGENT_ID, inputs
+    refute_nil evaluation_id
     assert_in_delta outputs["output1"], 8.8, 0.1
   end
 
+  def test_feedback_method
+    inputs = {input1: 10}
+    outputs, evaluation_id = @account.evaluate AGENT_ID, inputs
+    feedback = {performance: 3}
+    fb = @account.feedback evaluation_id, feedback
+    refute_nil feedback
+  end
 end
