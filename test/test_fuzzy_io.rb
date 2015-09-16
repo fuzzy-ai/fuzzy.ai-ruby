@@ -16,8 +16,10 @@ class TestFuzzyIo < MiniTest::Unit::TestCase
     assert_equal @account.key, API_KEY
   end
 
-  def test_evaluate
-    assert_equal "0.0.1", FuzzyIo::VERSION
+  def test_has_evaluate_method
+    inputs = {input1: 10}
+    outputs = @account.evaluate AGENT_ID, inputs
+    assert_in_delta outputs["output1"], 8.8, 0.1
   end
 
 end
