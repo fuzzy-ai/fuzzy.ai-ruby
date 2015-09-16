@@ -3,8 +3,8 @@ require 'minitest/autorun'
 require 'fuzzy_io'
 require 'fuzzy_io/version'
 
-API_KEY = "AAAABBBBB"
-AGENT_ID = "CCCCDDDD"
+API_KEY = ENV["FUZZY_IO_API_KEY"]
+AGENT_ID = ENV["FUZZY_IO_AGENT_ID"]
 
 class TestFuzzyIo < MiniTest::Unit::TestCase
 
