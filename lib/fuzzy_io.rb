@@ -2,7 +2,7 @@ require 'fuzzy_io/version'
 require 'net/http'
 require 'json'
 
-API_ROOT = "https://api.fuzzy.io"
+API_ROOT = "https://api.fuzzy.ai"
 
 module FuzzyIo
 
