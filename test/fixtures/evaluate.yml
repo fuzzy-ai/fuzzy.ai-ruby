@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.fuzzy.ai/agent/test-agent-id
+    body:
+      encoding: UTF-8
+      string: '{"input1":10}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer test-api-key
+      User-Agent:
+      - fuzzy.ai-ruby/0.1.0
+      Content-Length:
+      - '13'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Evaluation-Id:
+      - 0427d6df-3da6-4d6e-8c0c-fb2455891739
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '29'
+      Etag:
+      - W/"1d-3BNlIBlwKIT7dU/qrUpwJw"
+      Date:
+      - Fri, 28 Oct 2016 20:16:07 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: '{"output1":8.823529411764705}'
+    http_version:
+  recorded_at: Fri, 28 Oct 2016 20:16:07 GMT
+recorded_with: VCR 3.0.3

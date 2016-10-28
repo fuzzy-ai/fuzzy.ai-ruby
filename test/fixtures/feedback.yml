@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.fuzzy.ai/agent/test-agent-id
+    body:
+      encoding: UTF-8
+      string: '{"input1":10}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer test-api-key
+      User-Agent:
+      - fuzzy.ai-ruby/0.1.0
+      Content-Length:
+      - '13'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Evaluation-Id:
+      - 5c15652d-f152-461f-94e6-742b5d56973d
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '29'
+      Etag:
+      - W/"1d-3BNlIBlwKIT7dU/qrUpwJw"
+      Date:
+      - Fri, 28 Oct 2016 20:17:25 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: '{"output1":8.823529411764705}'
+    http_version:
+  recorded_at: Fri, 28 Oct 2016 20:17:25 GMT
+- request:
+    method: post
+    uri: https://api.fuzzy.ai/evaluation/5c15652d-f152-461f-94e6-742b5d56973d/feedback
+    body:
+      encoding: UTF-8
+      string: '{"performance":3}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer test-api-key
+      User-Agent:
+      - fuzzy.ai-ruby/0.1.0
+      Content-Length:
+      - '17'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Powered-By:
+      - Express
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '164'
+      Etag:
+      - W/"a4-mrXEMtYZ01kxI8tlrazaow"
+      Date:
+      - Fri, 28 Oct 2016 20:17:26 GMT
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: '{"evaluationLog":"5c15652d-f152-461f-94e6-742b5d56973d","data":{"performance":3},"createdAt":"2016-10-28T20:17:26.116Z","id":"4a176a1e-eca8-497b-957e-43616431953e"}'
+    http_version:
+  recorded_at: Fri, 28 Oct 2016 20:17:26 GMT
+recorded_with: VCR 3.0.3
