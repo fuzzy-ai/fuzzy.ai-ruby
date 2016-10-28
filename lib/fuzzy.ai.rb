@@ -1,11 +1,10 @@
-require 'fuzzy_io/version'
+require 'fuzzy.ai/version'
 require 'net/http'
 require 'json'
 
 API_ROOT = "https://api.fuzzy.ai"
 
-module FuzzyIo
-
+module FuzzyAi
   class Account
 
     attr_reader :key

@@ -1,13 +1,13 @@
 # FuzzyIo
 
-Client library for the fuzzy.io RESTful API
+Client library for the fuzzy.ai RESTful API
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'fuzzy_io'
+gem 'fuzzy.ai'
 ```
 
 And then execute:
@@ -16,16 +16,16 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install fuzzy_io
+    $ gem install fuzzy.ai
 
 ## Usage
 
-This gem handles the most basic usage of Fuzzy.io.
+This gem handles the most basic usage of Fuzzy.ai.
 
 ```ruby
 # Require the module
 
-require 'fuzzy_io'
+require 'fuzzy.ai'
 
 # Your API key (get one from https://fuzzy.io/)
 
@@ -33,9 +33,9 @@ API_KEY = 'YOUR_API_KEY_HERE'
 
 # Create an account object
 
-acct = FuzzyIo::Account.new API_KEY
+acct = FuzzyAi::Account.new API_KEY
 
-# ID of the agent you want to call; get it from https://fuzzy.io/
+# ID of the agent you want to call; get it from https://fuzzy.ai/
 
 AGENT_ID = 'AGENT_ID_HERE'
 
@@ -67,7 +67,7 @@ performance = {
 fb = acct.feedback evaluation_id, performance
 ```
 
-### FuzzyIo::Account
+### FuzzyAi::Account
 
 Class representing a single account; you can use it to do evaluations and give
 feedback.
@@ -75,7 +75,7 @@ feedback.
 #### initialize(key)
 
 Takes a string representing the API key. You can get the key on the top of your
-account page on https://fuzzy.io/ .
+account page on https://fuzzy.ai/ .
 
 #### evaluate(agent_id, inputs)
 
@@ -97,7 +97,7 @@ inverse (1/x).
 
 ## Contributing
 
-1. Fork it ( https://github.com/fuzzy-io/ruby/fork )
+1. Fork it ( https://github.com/fuzzy-ai/fuzzy.ai-ruby/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
